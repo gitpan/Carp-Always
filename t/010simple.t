@@ -1,3 +1,4 @@
+#perl -T 
 
 BEGIN {
     eval { require Test::Base };

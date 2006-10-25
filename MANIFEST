@@ -8,6 +8,6 @@ t/010simple.t
 t/098pod-coverage.t
 t/099pod.t
 
-Always.pm
-Indeed.pm
+lib/Carp/Always.pm
+lib/Carp/Indeed.pm
 META.yml                                 Module meta-data (added by MakeMaker)

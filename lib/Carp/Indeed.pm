@@ -1,13 +1,13 @@
 
 package Carp::Indeed;
 
-our $VERSION = '0.06';
+use strict;
+
+use Carp::Always; our $VERSION = $Carp::Always::VERSION;
 
 BEGIN { 
   print STDERR "Carp::Indeed was deprecated - use Carp::Always\n";
 }
-
-use Carp::Always;
 
 1;
 __END__
