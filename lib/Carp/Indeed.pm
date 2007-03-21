@@ -29,13 +29,7 @@ until you switch to use the new module.
 
 =head1 SEE ALSO
 
-=over 4
-
-=item *
-
-L<Carp::Always>
-
-=back
+  Carp::Always
 
 Please report bugs via CPAN RT 
 http://rt.cpan.org/NoAuth/Bugs.html?Dist=Carp-Always.
@@ -46,7 +40,7 @@ Adriano Ferreira, E<lt>ferreira@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005, 2006 by Adriano R. Ferreira
+Copyright (C) 2005-2007 by Adriano R. Ferreira
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
