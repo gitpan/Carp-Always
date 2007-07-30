@@ -5,7 +5,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 use Carp qw(verbose); # makes carp() cluck and croak() confess
 
@@ -103,9 +103,10 @@ docs of this module were prodded by Michael Schwern.
 Schwern and others told me "the module name stinked" -
 it was called C<Carp::Indeed>. After thinking long
 and not getting nowhere, I went with nuffin's suggestion
-and now it is called C<Carp::Always>. For the time
-being, C<Carp::Indeed> is here (in this dist) too 
-as a deprecate module.
+and now it is called C<Carp::Always>. 
+C<Carp::Indeed> which is now deprecate
+lives in its own distribution (which won't go anywhere
+but will stay there as a redirection to this module).
 
 =head1 SEE ALSO
 

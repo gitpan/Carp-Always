@@ -1,6 +1,11 @@
 Revision history for Perl extension Carp::Always.
 
-    $Id: Changes 1228 2007-03-21 10:28:27Z me $
+    $Id: Changes 1480 2007-07-30 14:35:04Z me $
+
+0.09  Mon Jul 30 2007
+        - no need for updating
+        - lib/Carp/Indeed.pm was moved to the deprecate
+          Carp-Indeed distribution
 
 0.08  Tue Mar 20 2007
         - no need for updating
