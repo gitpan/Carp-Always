@@ -5,23 +5,24 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
 use Carp qw(verbose); # makes carp() cluck and croak() confess
 
 sub _warn {
   if ($_[-1] =~ /\n$/s) {
     my $arg = pop @_;
-    $arg =~ s/ at .*? line .*?\n$//s;
+    $arg =~ s/(.*)( at .*? line .*?\n$)/$1/s;
     push @_, $arg;
   }
   warn &Carp::longmess;
 }
 
 sub _die {
+  die @_ if ref($_[0]);
   if ($_[-1] =~ /\n$/s) {
     my $arg = pop @_;
-    $arg =~ s/ at .*? line .*?\n$//s;
+    $arg =~ s/(.*)( at .*? line .*?\n$)/$1/s;
     push @_, $arg;
   }
   die &Carp::longmess;
@@ -85,7 +86,7 @@ emit the stack backtraces.
 
 Oh, by the way, C<carp> and C<croak> when requiring/using
 the C<Carp> module are also made verbose, behaving
-like C<cloak> and C<confess>, respectively.
+like C<cluck> and C<confess>, respectively.
 
 =head2 EXPORT
 
@@ -119,6 +120,14 @@ L<Carp>
 =item *
 
 L<Acme::JavaTrace> and L<Devel::SimpleTrace>
+
+=item *
+
+L<Carp::Always::Color>
+
+=item *
+
+L<Carp::Source::Always>
 
 =back
 
@@ -154,7 +163,7 @@ Adriano Ferreira, E<lt>ferreira@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005-2007 by Adriano R. Ferreira
+Copyright (C) 2005-2011 by Adriano R. Ferreira
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
